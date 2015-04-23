@@ -19,7 +19,7 @@ jQuery.fn.jukLoader = function (action, conf)
             
             config = jQuery.extend({
                 className: 'x-loader',
-                pathImageLoader: '/js/jsuikit/juk-loader/loader.gif'
+                pathImageLoader: '/bower_components/juk/juk-loader/loader.gif'
             }, conf);
             
             var offset = el.offset();
