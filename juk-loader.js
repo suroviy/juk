@@ -12,10 +12,10 @@ jQuery.fn.jukLoader = function (action, conf)
     if (action === 'set') 
     {        
         //var config = jQuery.extend(qb.qLoader.config, conf);
-
+        
         return this.each(function () 
         {
-              var el = jQuery(this);
+            var el = jQuery(this);
             
             config = jQuery.extend({
                 className: 'x-loader',
