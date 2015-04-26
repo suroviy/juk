@@ -26,6 +26,9 @@
                 url: $form.attr('action'),
                 update_url: $form.attr('action'),
                 method: $form.attr('method'),
+                data: function($form){
+                    return $form.serializeArray();
+                },
                 success: function(data){
                     iniForm(data);
                 },
@@ -149,7 +152,7 @@
                 $.ajax({
                     type: config.method,
                     url: config.submit_url,
-                    data: $form.serializeArray(),
+                    data: config.data($form),
                     dataType: 'json',
                     beforeSend: function(){
                         config.event_run_ajax();
